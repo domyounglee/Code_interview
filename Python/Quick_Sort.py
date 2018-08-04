@@ -4,7 +4,7 @@ def quick_sort(data, start, end):
 
 	#탈출조건 
 	if start-end>=0:
-		print("--")
+		#print("--")
 		return
 	#set left and right and pivot 
 	left=start
@@ -12,17 +12,17 @@ def quick_sort(data, start, end):
 
 	pivot=data[(end+start)//2]
 
-	print(pivot)
+	#print(pivot)
 	
 	while(left<=right):
 	
 		#move left right
 		while(data[left] < pivot):
 			left+=1
-			print("left"+str(left))
+			#print("left"+str(left))
 		while(data[right] >  pivot):
 			right-=1
-			print("right"+str(right))
+			#print("right"+str(right))
 
 
 		#left와 right가 교차하지 않았다면 교환
@@ -33,15 +33,22 @@ def quick_sort(data, start, end):
 			right -= 1
 
 
-		print(data)
+		#print(data)
 		#print(left,right)
 
-	print("_________")
+	#print("_________")
 	quick_sort(data, start, right)
 	quick_sort(data, left, end)
 
 
 if __name__ == "__main__":
-    data = [2, 5, 4, 1, 8, 10, 5, 3, 1, 6, 5, 7, 9, 12, 11]
+    data=[]
+    T=input()
+    print(T)
+    for i in range(int(T)):
+    	num=input()
+    	data.append(num)
+    
     quick_sort(data, 0, len(data) - 1)
-    #print(data)
+    for i in range(int(T)):
+    	print(data[i])

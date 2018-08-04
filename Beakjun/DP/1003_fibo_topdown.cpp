@@ -16,6 +16,7 @@ int fib(int num){
     	cnt[1]++;
     	return 0;}
 
+    // if num exist
    	if(dp_cnt[num][0]!=0){
 
    		cnt[0]=cnt[0]+dp_cnt[num][0];
