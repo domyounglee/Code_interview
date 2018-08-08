@@ -4,7 +4,7 @@
 #define MAX 1000000
 using namespace std;
 
-int N , val[301], dp[301][3];
+int N , val[301], dp[301][2];
 int stair(int num,int check){
 	//printf("(%d %d) \n",num,check);
 	int result=0;
@@ -20,8 +20,8 @@ int stair(int num,int check){
 	}
 	if(num>=1 ){
 		//in case of first step or not consecutive step1 
-		if(check<1 || num==1){
-			result = max(result, stair(num-1, check+1) + val[num]);
+		if(num==1 || check!=1 ){
+			result = max(result, stair(num-1, 1) + val[num]);
 			//printf("1: %d %d/ ",result, val[num]);
 		}
 		

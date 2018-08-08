@@ -24,6 +24,7 @@ int RGB(int house_id,int rgb){
 		if(min_result > result){min_result = result;}
 			
 	}
+	
 	//printf("&");		
 	//printf("%d=%d /\n",house_id,min_result);
 	dp[house_id][rgb] = min_result;
@@ -33,13 +34,10 @@ int main(void){
 
 	scanf("%d",&N);
 
-
-
 	for(int i=0; i<N; i++){
 		for(int j=0 ; j<3; j++){
 			dp[i][j] = -1;
 			scanf("%d",&cost[i][j]);
-			
 		}
 	}
 	

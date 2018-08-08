@@ -6,7 +6,6 @@ using namespace std;
 
 int N , val[301], dp[301][3];
 
-
 int main(){
 	int N;
 	scanf("%d",&N);

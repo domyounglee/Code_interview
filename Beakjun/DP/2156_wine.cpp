@@ -30,7 +30,7 @@ int main(){
 		dp[i+2][1] = dp[i+1][0]+ val[i+2];
 		
  	}	
- 	//last step can be consecutive 
+ 	//N+1까지 가야 끝나는 거임. N이 중요한게 아님 과정일뿐
  	dp[N+1][0] = max(dp[N-1][0], dp[N-1][1]);
 	dp[N+1][1] = max(dp[N][0], dp[N][1]);
 

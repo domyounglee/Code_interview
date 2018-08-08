@@ -22,9 +22,11 @@ int main(){
     	dp_cnt[0][1]=0;
     	dp_cnt[1][0]=0;
     	dp_cnt[1][1]=1;
+
+        
     	for(int i=2; i<= N; i++){
-    		dp_cnt[i][0]=dp_cnt[i-1][0]+dp_cnt[i-2][0];
-    		dp_cnt[i][1]=dp_cnt[i-1][1]+dp_cnt[i-2][1];
+    		dp_cnt[i][0] = dp_cnt[i-1][0] + dp_cnt[i-2][0];
+    		dp_cnt[i][1] = dp_cnt[i-1][1] + dp_cnt[i-2][1];
     	}
 
     	

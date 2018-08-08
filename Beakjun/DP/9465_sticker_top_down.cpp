@@ -5,7 +5,9 @@
 using namespace std;
 
 int N , val[2][MAX], dp[MAX][3];
+//status is the previous row 
 int sticker(int c,int status){
+
 	if(c==N){return 0;}
 	if(dp[c][status]!=-1){return dp[c][status];}
 

@@ -7,9 +7,9 @@ using namespace std;
 int val_count, total_money;
 int val[MAX_VAL], dp[MAX_MONEY][MAX_VAL];
 
-int coin(int money,int v_idx){
+int coin(int money, int v_idx){
 	if(v_idx==0){
-		if(money%val[v_idx]==0){return 1;}
+		if(money % val[v_idx]==0){return 1;}
 		else return 0;
 	}	
 
@@ -24,6 +24,7 @@ int coin(int money,int v_idx){
 		count+=coin(money-i*val[v_idx],v_idx-1);
 	}
 
+	//memoization
 	dp[money][v_idx]=count;
 
 	return count;
